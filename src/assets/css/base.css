@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* line 6, ../sass/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 13, ../sass/_base.scss */
+body {
+  font-family: "microsoft yahei";
+  color: gray;
+  background-color: whitesmoke;
+  font-size: .18rem;
+  height: 100%;
+}
+
+/* line 20, ../sass/_base.scss */
+body.ios {
+  font-family: "HelveticaNenu", "Helvetica", "microsoft yahei";
+}
+
+/* line 23, ../sass/_base.scss */
+body.android {
+  font-family: "Droid Sans", "microsoft yahei";
+}
