@@ -10,7 +10,7 @@ var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
 var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
 // 获得入口 js 文件
-var entries = utils.getEntry('./src/views/**/*.js')
+var entries = utils.getEntry('./src/views/**/main.js')
 var chunks = Object.keys(entries)
 
 module.exports = {
@@ -62,6 +62,10 @@ module.exports = {
       }
     ],
     loaders: [
+      {
+        test: /\.html$/,
+        loader: 'swig-loader'
+      },
       {
         test: /\.vue$/,
         loader: 'vue'
